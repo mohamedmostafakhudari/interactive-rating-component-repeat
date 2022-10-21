@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet"> 
+<link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="text-[15px] font-overpass">
+  <main class="bg-neutral-veryDarkBlue min-h-screen grid place-items-center">
+  <!-- Rating state start -->
+   <!-- rating card -->
+    <div id='ratingCard' class="bg-neutral-darkBlue/70 p-6 mx-6 rounded-xl space-y-3 max-w-[350px]">
+      <!-- image -->
+      <div>
+        <div class="bg-neutral-mediumGrey/10 w-fit w-8 h-8 flex items-center justify-center rounded-full">
+          <img src="./images/icon-star.svg" alt="star" aria-hidden="true" class="w-3">
+        </div>
+      </div>
+      <article class="">
+        <!-- text -->
+        <div class="space-y-2">
+          <h1 class="text-2xl text-neutral-white font-bold">How did we do?</h1>
+          <p class="leading-5 text-neutral-mediumGrey">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+        </div>
+        <!-- rating -->
+        <div class="mt-6">
+          <ul id='ratings' class="flex justify-between">
+            <li data-rate="1" class="bg-neutral-mediumGrey/10 w-10 h-10 relative text-neutral-mediumGrey rounded-full ease-in-out duration-300 cursor-pointer flex items-center justify-center hover:bg-primary-orange hover:text-neutral-white">1</li>
+            <li data-rate="2" class="bg-neutral-mediumGrey/10 w-10 h-10 relative text-neutral-mediumGrey rounded-full ease-in-out duration-300 cursor-pointer flex items-center justify-center hover:bg-primary-orange hover:text-neutral-white">2</li>
+            <li data-rate="3" class="bg-neutral-mediumGrey/10 w-10 h-10 relative text-neutral-mediumGrey rounded-full ease-in-out duration-300 cursor-pointer flex items-center justify-center hover:bg-primary-orange hover:text-neutral-white">3</li>
+            <li data-rate="4" class="active bg-neutral-mediumGrey/10 w-10 h-10 relative text-neutral-mediumGrey rounded-full ease-in-out duration-300 cursor-pointer flex items-center justify-center hover:bg-primary-orange hover:text-neutral-white">4</li>
+            <li data-rate="5" class="bg-neutral-mediumGrey/10 w-10 h-10 relative text-neutral-mediumGrey rounded-full ease-in-out duration-300 cursor-pointer flex items-center justify-center hover:bg-primary-orange hover:text-neutral-white">5</</li>
+          </ul>
+        </div>
+        <button id='submit' class="mt-6 bg-primary-orange block w-full py-3 rounded-full text-neutral-white uppercase text-sm tracking-widest ease-in-out duration-300 hover:bg-neutral-white hover:text-primary-orange">Submit</button>
+     </article>
+    </div>
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+  <!-- thank you card -->
+    <div id='thankyouCard' class="bg-neutral-darkBlue/70 p-6 py-10 mx-6 rounded-xl space-y-8 max-w-[350px] text-center hidden">
+      <img src="./images/illustration-thank-you.svg" alt="thank you" srcset="" class="mx-auto thankyou">
+      <p class="bg-neutral-mediumGrey/10 w-fit mx-auto rounded-full p-1 px-4 text-primary-orange text-sm">You selected <span id="rate">4</span> out of 5</p>
+      <!-- text -->
+      <div class="space-y-2">
+        <h1 class="text-2xl text-neutral-white font-bold">Thank you!</h1>
+        <p class="text-neutral-mediumGrey">We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!</p>
+      </div>
+
+    </div>
+  <!-- Thank you state end -->
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Mohamed Mostafa</a>.
+  </div>
+  <script src="./script.js"></script>
+</body>
+</html>
